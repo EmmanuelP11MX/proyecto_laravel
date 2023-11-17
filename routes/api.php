@@ -12,6 +12,7 @@ Route::middleware('auth:sanctum')->group(
     function () {
         Route::apiResource('solicitud', SolicitudController::class);
         Route::apiResource('ejemploApi', EjemploApiController::class);
+        Route::post('auth/cambio-password', [AuthController::class, 'changePassword']);
     }
 );
 
